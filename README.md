@@ -13,8 +13,9 @@ A responsive, single-page website for shared truckload freight across Ethiopia. 
 | `assets/` | Vector logo, favicon, WebP imagery and self-hosted Inter font |
 | `404.html` | Missing-page screen |
 | `.nojekyll` | Serve the static files directly on GitHub Pages |
+| `CNAME` | Configured GitHub Pages custom domain: `sharedtrucks.com` |
 
-No framework, package installation or build step is required. Open `index.html` to view the site, or serve this folder with any static web server. The files use relative paths so the website works at a GitHub Pages project URL and, later, a custom domain.
+No framework, package installation or build step is required. Open `index.html` to view the site, or serve this folder with any static web server. The files use relative paths so the website works at a GitHub Pages project URL or a custom domain.
 
 ## Quote form — email enquiries
 
@@ -49,9 +50,25 @@ Reference: [GitHub’s publishing-source documentation](https://docs.github.com/
 
 ## Custom domain
 
-The domain is intentionally not configured yet because the owner will provide it later. After confirming the exact domain, configure it in the repository’s Pages settings and add the matching DNS records in GoDaddy. Preserve existing mail records. Follow GitHub’s current guidance, verify DNS, and enable HTTPS when the certificate is ready.
+`sharedtrucks.com` is configured in the repository’s GitHub Pages settings, and the root `CNAME` file contains this domain. The website DNS records in GoDaddy are:
 
-Reference: [GitHub’s custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+| Host | Type | Value |
+| --- | --- | --- |
+| `@` | `A` | `185.199.108.153` |
+| `@` | `A` | `185.199.109.153` |
+| `@` | `A` | `185.199.110.153` |
+| `@` | `A` | `185.199.111.153` |
+| `@` | `AAAA` | `2606:50c0:8000::153` |
+| `@` | `AAAA` | `2606:50c0:8001::153` |
+| `@` | `AAAA` | `2606:50c0:8002::153` |
+| `@` | `AAAA` | `2606:50c0:8003::153` |
+| `www` | `CNAME` | `falmata-tech.github.io` |
+
+The original nameservers and existing email records remain unchanged. Preserve them when updating website DNS, and keep the root `CNAME` file in future deployments.
+
+GitHub provisions the TLS certificate automatically after DNS validation. Once the certificate is ready, open the repository’s **Settings → Pages** and select **Enforce HTTPS** if it is not already enabled.
+
+References: [GitHub’s custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) and [HTTPS setup](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https).
 
 ## Brand and assets
 
