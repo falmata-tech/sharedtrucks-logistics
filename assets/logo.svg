@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1208" height="320" viewBox="0 0 1208 320" fill="none" role="img" aria-labelledby="sharedtrucks-logo-title sharedtrucks-logo-description">
+  <title id="sharedtrucks-logo-title">SharedTrucks Logistics</title>
+  <desc id="sharedtrucks-logo-description">The navy modular S mark beside a bold SharedTrucks wordmark and widely spaced slate Logistics lettering.</desc>
+  <g fill="#14293D" transform="translate(8 10)">
+    <path d="M21 65 133 3C139-1 145-1 152 3L254 56C261 60 263 65 263 72V123C263 133 255 139 246 134L120 73C108 67 98 73 98 86V169C98 173 96 176 92 174L22 140C16 137 13 132 13 126V80C13 73 16 69 21 65Z"/>
+    <path d="M16 165 149 230C155 233 160 231 160 224V183C160 177 157 174 152 172L127 160C123 158 121 154 121 149V110C121 105 124 103 129 106L249 164C255 167 257 171 257 178V219C257 225 255 229 250 232L130 297C123 301 117 301 110 297L7 242C2 239 0 236 0 230V179C0 168 7 161 16 165Z"/>
+  </g>
+  <text x="314" y="184" fill="#14293D" font-family="Arial, Helvetica, sans-serif" font-size="164" font-weight="800" letter-spacing="-6" textLength="880" lengthAdjust="spacingAndGlyphs">SharedTrucks</text>
+  <text x="318" y="259" fill="#42647B" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="400" letter-spacing="23" textLength="580" lengthAdjust="spacing">LOGISTICS</text>
+</svg>

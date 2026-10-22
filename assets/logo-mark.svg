@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="308" viewBox="0 0 272 308" fill="none" role="img" aria-labelledby="sharedtrucks-mark-title sharedtrucks-mark-description">
+  <title id="sharedtrucks-mark-title">SharedTrucks</title>
+  <desc id="sharedtrucks-mark-description">A navy modular S formed by two interlocking cargo-shaped ribbons.</desc>
+  <g fill="#14293D" transform="translate(4 4)">
+    <path d="M21 65 133 3C139-1 145-1 152 3L254 56C261 60 263 65 263 72V123C263 133 255 139 246 134L120 73C108 67 98 73 98 86V169C98 173 96 176 92 174L22 140C16 137 13 132 13 126V80C13 73 16 69 21 65Z"/>
+    <path d="M16 165 149 230C155 233 160 231 160 224V183C160 177 157 174 152 172L127 160C123 158 121 154 121 149V110C121 105 124 103 129 106L249 164C255 167 257 171 257 178V219C257 225 255 229 250 232L130 297C123 301 117 301 110 297L7 242C2 239 0 236 0 230V179C0 168 7 161 16 165Z"/>
+  </g>
+</svg>
