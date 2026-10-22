@@ -125,6 +125,7 @@ h3 { font-size: 22px; line-height: 1.25; letter-spacing: -.04em; }
 .quote-contact a:hover { text-decoration-color: var(--navy); }
 .quote-form-wrap { padding-left: 40px; border-left: 1px solid #cfdde7; min-width: 0; }
 #quote-form { display: grid; gap: 16px; }
+.form-honeypot { display: none !important; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .field { min-width: 0; }
 .field label { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 540; line-height: 1.4; }
@@ -143,12 +144,6 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 .form-status { font-size: 14px; line-height: 1.6; }
 .form-status:empty { display: none; }
 .form-status[data-state="error"] { color: #9a2b24; }
-.quote-draft { padding-top: 25px; margin-top: 26px; border-top: 1px solid #cfdde7; }
-.quote-draft h3 { font-size: 21px; margin-bottom: 15px; }
-.quote-draft textarea { font-family: Inter, Arial, sans-serif; font-size: 13px; }
-.draft-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 16px; }
-.draft-actions .button { font-size: 13px; min-height: 44px; padding: 10px 15px; }
-.draft-actions .text-link { font-size: 13px; }
 
 .site-footer { padding-block: 28px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
@@ -220,7 +215,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
   .quote-grid { grid-template-columns: 1fr; gap: 34px; }
   .quote-copy > p:not(.eyebrow) { max-width: 530px; }
   .quote-form-wrap { border-left: 0; padding-left: 0; }
-  input, textarea, select, .quote-draft textarea { font-size: 16px; }
+  input, textarea, select { font-size: 16px; }
   .footer-brand { width: 190px; }
 }
 @media (max-width: 520px) {

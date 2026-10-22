@@ -1,13 +1,8 @@
 /*
- * The business email opens the visitor's email app for review and sending.
- * Optional destinations can be configured below; leave all three blank for draft-only mode.
- * When several are set, the order is: form endpoint, email, then WhatsApp.
- * Do not put passwords, API keys, or other secrets in this public file.
+ * Web3Forms delivery for sharedtrucks.cargo@gmail.com.
+ * This is a public form alias, not a secret; never add passwords or private keys.
+ * Leaving it blank keeps online submission disabled until the form is configured.
  */
 window.SHAREDTRUCKS_CONFIG = {
-  businessEmail: 'sharedtrucks.cargo@gmail.com',
-  // Use the international number with country code, e.g. digits only.
-  whatsappNumber: '',
-  // An HTTPS address that accepts a JSON POST containing the form fields.
-  formEndpoint: ''
+  web3formsAccessKey: '6b5df794-27bb-4621-a546-9cf8b13b1bd4'
 };

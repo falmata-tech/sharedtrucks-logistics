@@ -156,6 +156,7 @@
         </div>
         <div class="quote-form-wrap">
           <form id="quote-form">
+            <input id="botcheck" class="form-honeypot" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-row">
               <div class="field">
                 <label for="pickup">Pickup city <span class="required" aria-hidden="true">*</span></label>
@@ -190,21 +191,11 @@
                 <input id="contact" name="contact" type="text" placeholder="Contact details" autocomplete="email" maxlength="180" required>
               </div>
             </div>
-            <button id="quote-submit" class="button submit-button" type="submit" disabled><span id="quote-submit-label" data-submit-label>Request a quote</span><svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></button>
-            <p id="quote-setup-note" class="form-note" hidden></p>
+            <button id="quote-submit" class="button submit-button" type="submit" disabled><span id="quote-submit-label" data-submit-label>Send enquiry</span><svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></button>
             <p class="field-key">Fields marked * are required.</p>
             <p id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
-            <noscript><p class="form-note">Enable JavaScript to prepare your shipment enquiry. No information has been sent.</p></noscript>
+            <noscript><p class="form-note">Enable JavaScript to send your enquiry using this form.</p></noscript>
           </form>
-          <section id="quote-draft" class="quote-draft" aria-labelledby="draft-title" hidden>
-            <h3 id="draft-title">Your shipment enquiry</h3>
-            <label class="sr-only" for="quote-summary">Shipment enquiry summary</label>
-            <textarea id="quote-summary" rows="11" readonly></textarea>
-            <div class="draft-actions">
-              <button id="copy-quote" class="button button-secondary" type="button">Copy enquiry</button>
-              <button id="download-quote" class="text-link" type="button">Download enquiry <svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></button>
-            </div>
-          </section>
         </div>
       </div>
     </section>

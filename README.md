@@ -8,8 +8,8 @@ A responsive, single-page website for shared truckload freight across Ethiopia. 
 | --- | --- |
 | `index.html` | Page content, navigation and quote form |
 | `styles.css` | Brand styling and responsive layouts |
-| `script.js` | Mobile navigation, form validation and enquiry delivery/draft logic |
-| `site-config.js` | Verified business destination for quote enquiries |
+| `script.js` | Mobile navigation, validation and direct enquiry submission |
+| `site-config.js` | Public Web3Forms access key for the business enquiry form |
 | `assets/` | Vector logo, favicon, WebP imagery and self-hosted Inter font |
 | `404.html` | Missing-page screen |
 | `.nojekyll` | Serve the static files directly on GitHub Pages |
@@ -17,27 +17,35 @@ A responsive, single-page website for shared truckload freight across Ethiopia. 
 
 No framework, package installation or build step is required. Open `index.html` to view the site, or serve this folder with any static web server. The files use relative paths so the website works at a GitHub Pages project URL or a custom domain.
 
-## Quote form — email enquiries
+## Quote form — direct website submissions
 
-The quote form is configured for **sharedtrucks.cargo@gmail.com**. After the visitor completes the required fields, **Continue by email** opens a completed enquiry in their email app. The visitor reviews the message and presses **Send** there; the website does not send an email automatically. A copyable/downloadable draft remains available if an email app is unavailable. The quote section also includes a direct email link.
+Visitors use **Send enquiry** to submit from the page. JavaScript sends the form fields to Web3Forms over HTTPS; the service delivers accepted submissions to the mailbox associated with the form’s access key. The owner-provided public key is configured in `site-config.js` for enquiries intended for **sharedtrucks.cargo@gmail.com**. Visitors remain on the website throughout submission. The separate email link remains an optional contact method.
 
-To change the business address or add another delivery option, edit `site-config.js`. The current settings are:
+### Maintain or replace the receiving form
+
+1. Sign in or create a free [Web3Forms account](https://web3forms.com/), verify the business email, and create a form whose recipient is **sharedtrucks.cargo@gmail.com**.
+2. Copy that form’s public access key into `site-config.js`:
 
 ```js
 window.SHAREDTRUCKS_CONFIG = {
-  businessEmail: 'sharedtrucks.cargo@gmail.com',
-  whatsappNumber: '',
-  formEndpoint: ''
+  web3formsAccessKey: ''
 };
 ```
 
-- **Business email:** opens the visitor’s email app with a completed enquiry. The visitor reviews it and sends it from their own email app.
-- **WhatsApp:** use the business number with its international country code. Opens a message draft for the visitor to review and send.
-- **Form endpoint:** an HTTPS service that accepts JSON fields `pickup`, `destination`, `details`, `vehicle`, `name`, and `contact`. The service must accept requests from the website origin. A success message appears only after an HTTP success response; errors preserve the visitor’s draft.
+3. Publish the updated configuration with the site. A blank key keeps the submit button disabled and displays a short temporary-unavailability message.
+4. Send one clearly labelled test enquiry from the published HTTPS site. Check the page confirmation and the receiving inbox, including spam, and confirm that the shipment fields and contact details arrive. Test a valid email contact for Reply-To and a phone-only contact before treating delivery as verified.
 
-Priority when several are provided: form endpoint, email, then WhatsApp. Keep unused values empty. If every destination is blank or invalid, the form offers **Prepare enquiry** and makes clear that the details have not been sent. Do not put credentials or private API keys in this public configuration file. The website keeps entered details only in the current page; it does not store them in browser storage or send analytics.
+The current free plan includes **250 submissions per month**; check [Web3Forms pricing](https://web3forms.com/#pricing) when choosing or changing the plan. The access key is a public alias for the receiving form, designed for browser use. Do not place passwords or private credentials in this file.
 
-GitHub Pages serves static content. The current email-app option does not require a server. To receive submissions directly from the website, configure a compatible HTTPS form endpoint; that service should perform its own validation and spam protection.
+### Submission behavior
+
+- The endpoint is fixed to `https://api.web3forms.com/submit`. The payload includes `name`, `contact`, `pickup`, `destination`, `details`, `vehicle`, the form access key, the subject **SharedTrucks — new shipment enquiry**, and the sender label **SharedTrucks Logistics**.
+- When the contact value is a valid email address, it is also supplied as `email` and `replyto`. A phone-only contact remains in `contact`, with those email-specific fields omitted.
+- The hidden `botcheck` checkbox provides the service’s honeypot field. No captcha-disabling or automatic-response options are added.
+- While sending, the form controls are disabled to prevent duplicate requests or edits to an enquiry in flight. Network, HTTP, malformed-response, and service failures retain entered details and show an accessible error. The form resets only after an HTTP success response and an explicit JSON `success: true`, with no activation or error indication.
+- JavaScript is required for this form. The website does not save enquiries in browser storage or add analytics. Submitted details are processed by Web3Forms under the owner’s service settings.
+
+References: [Web3Forms installation and form options](https://docs.web3forms.com/getting-started/installation) and [HTML and JavaScript submission](https://docs.web3forms.com/how-to-guides/html-and-javascript).
 
 ## GitHub Pages
 
