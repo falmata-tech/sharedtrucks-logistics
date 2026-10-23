@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="180" viewBox="0 0 360 180" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Cargo van, side profile</title>
+  <path d="M26 142H334" stroke="#dce4eb" stroke-width="2"/>
+  <g stroke="#14293d" stroke-width="2" stroke-linejoin="round">
+    <path d="M60 128V77C60 69 65 64 73 64H208C217 64 224 69 229 78L244 102H268C277 102 284 110 287 121V128H273C272 119 266 113 257 113C248 113 242 119 241 128H116C115 119 109 113 100 113C91 113 85 119 84 128H60Z" fill="#f4f7fa"/>
+    <path d="M193 72H207C213 72 217 75 221 82L232 101H193V72Z" fill="#42647b" fill-opacity=".16" stroke="#42647b"/>
+    <path d="M80 75H179V104H80V75Z" stroke="#dce4eb"/>
+    <path d="M186 65V127M237 105V126M72 65V117" stroke="#42647b"/>
+    <path d="M166 110H176M198 110H209M122 122H235" stroke="#42647b" stroke-linecap="round"/>
+    <path d="M60 105H66V116H60M278 110H283L287 120H278V110Z" fill="#fff" stroke="#42647b"/>
+    <path d="M232 98H244V104H236" fill="#14293d"/>
+    <path d="M62 123H78M278 125H286" stroke="#42647b"/>
+  </g>
+  <g fill="#14293d"><circle cx="100" cy="130" r="12"/><circle cx="257" cy="130" r="12"/></g>
+  <g fill="#f4f7fa" stroke="#42647b" stroke-width="2"><circle cx="100" cy="130" r="6"/><circle cx="257" cy="130" r="6"/></g>
+  <g fill="#14293d"><circle cx="100" cy="130" r="2"/><circle cx="257" cy="130" r="2"/></g>
+</svg>

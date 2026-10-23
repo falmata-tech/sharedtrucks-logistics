@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="180" viewBox="0 0 360 180" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Medium box truck, side profile</title>
+  <path d="M26 142H334" stroke="#dce4eb" stroke-width="2"/>
+  <g stroke="#14293d" stroke-width="2" stroke-linejoin="round">
+    <path d="M43 48H235V117H43V48Z" fill="#f4f7fa"/>
+    <path d="M49 54H229V109H49V54Z" stroke="#dce4eb"/>
+    <path d="M43 113H235M53 49V112M225 49V112" stroke="#42647b"/>
+    <path d="M46 118H253V127H122C121 118 115 113 106 113C97 113 91 118 90 127H46V118Z" fill="#42647b" fill-opacity=".16"/>
+    <path d="M244 128V69H282C290 69 295 73 300 81L315 103V128H303C302 119 296 113 287 113C278 113 272 119 271 128H244Z" fill="#f4f7fa"/>
+    <path d="M252 77H280C285 77 288 80 292 86L300 100H252V77Z" fill="#42647b" fill-opacity=".16" stroke="#42647b"/>
+    <path d="M250 104V119H266M255 108H264M133 127V132H211V127M236 117H243" stroke="#42647b"/>
+    <path d="M309 108H315V116H309V108Z" fill="#fff" stroke="#42647b"/>
+    <path d="M314 101H320V88H315M309 125H319V129H308" stroke="#42647b"/>
+    <path d="M42 118H47V123H42V118Z" fill="#42647b"/>
+  </g>
+  <g fill="#14293d"><circle cx="106" cy="130" r="12"/><circle cx="287" cy="130" r="12"/></g>
+  <g fill="#f4f7fa" stroke="#42647b" stroke-width="2"><circle cx="106" cy="130" r="6"/><circle cx="287" cy="130" r="6"/></g>
+  <g fill="#14293d"><circle cx="106" cy="130" r="2"/><circle cx="287" cy="130" r="2"/></g>
+</svg>

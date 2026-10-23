@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="180" viewBox="0 0 360 180" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Courier car, side profile</title>
+  <path d="M26 142H334" stroke="#dce4eb" stroke-width="2"/>
+  <g stroke="#14293d" stroke-width="2" stroke-linejoin="round">
+    <path d="M70 124V109C70 104 73 101 79 99L97 80H181C189 80 194 82 199 88L216 103H254C267 103 275 111 281 123V128H268C267 119 261 113 252 113C243 113 237 119 236 128H124C123 119 117 113 108 113C99 113 93 119 92 128H74C72 128 70 126 70 124Z" fill="#f4f7fa"/>
+    <path d="M104 87H142V103H89L104 87ZM150 87H180C186 87 190 89 193 93L203 103H150V87Z" fill="#42647b" fill-opacity=".16" stroke="#42647b"/>
+    <path d="M146 105V127M211 107V127" stroke="#42647b"/>
+    <path d="M153 110H164M218 110H229" stroke="#42647b" stroke-linecap="round"/>
+    <path d="M72 110H82V116H70M270 112H276L280 120H270V112Z" fill="#fff" stroke="#42647b"/>
+    <path d="M128 122H231M76 122H86M273 125H280" stroke="#42647b"/>
+    <path d="M206 101H216V106H209" fill="#14293d"/>
+  </g>
+  <g fill="#14293d">
+    <circle cx="108" cy="130" r="12"/><circle cx="252" cy="130" r="12"/>
+  </g>
+  <g fill="#f4f7fa" stroke="#42647b" stroke-width="2">
+    <circle cx="108" cy="130" r="6"/><circle cx="252" cy="130" r="6"/>
+  </g>
+  <g fill="#14293d"><circle cx="108" cy="130" r="2"/><circle cx="252" cy="130" r="2"/></g>
+</svg>

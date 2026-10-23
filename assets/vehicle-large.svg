@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="180" viewBox="0 0 360 180" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Large articulated freight truck, side profile</title>
+  <path d="M26 142H334" stroke="#dce4eb" stroke-width="2"/>
+  <g stroke="#14293d" stroke-width="2" stroke-linejoin="round">
+    <path d="M21 35H256V112H21V35Z" fill="#f4f7fa"/>
+    <path d="M27 41H250V104H27V41Z" stroke="#dce4eb"/>
+    <path d="M21 108H256M31 36V107M246 36V107" stroke="#42647b"/>
+    <path d="M24 113H256V119H120C116 114 111 112 105 112H68C62 112 57 114 53 119H24V113Z" fill="#42647b" fill-opacity=".16"/>
+    <path d="M125 120V132H204V120M212 113V129M208 129H216M228 120H280V128H261C260 119 254 113 245 113C236 113 230 119 229 128H225V120Z" stroke="#42647b"/>
+    <path d="M267 128V56H291C301 56 307 62 312 72L334 105V128H326C325 119 319 113 310 113C301 113 295 119 294 128H267Z" fill="#f4f7fa"/>
+    <path d="M278 67H290C296 67 299 71 303 78L315 97H278V67Z" fill="#42647b" fill-opacity=".16" stroke="#42647b"/>
+    <path d="M275 102V120H290M282 107H291M266 61H258V97M332 103H339V88H334" stroke="#42647b"/>
+    <path d="M329 109H334V116H329V109Z" fill="#fff" stroke="#42647b"/>
+    <path d="M329 126H339V130H328M21 114H27V120H21V114Z" fill="#42647b"/>
+    <path d="M54 129C54 119 60 112 69 112H103C112 112 118 119 118 129" stroke="#42647b"/>
+  </g>
+  <g fill="#14293d"><circle cx="70" cy="130" r="12"/><circle cx="103" cy="130" r="12"/><circle cx="245" cy="130" r="12"/><circle cx="310" cy="130" r="12"/></g>
+  <g fill="#f4f7fa" stroke="#42647b" stroke-width="2"><circle cx="70" cy="130" r="6"/><circle cx="103" cy="130" r="6"/><circle cx="245" cy="130" r="6"/><circle cx="310" cy="130" r="6"/></g>
+  <g fill="#14293d"><circle cx="70" cy="130" r="2"/><circle cx="103" cy="130" r="2"/><circle cx="245" cy="130" r="2"/><circle cx="310" cy="130" r="2"/></g>
+</svg>

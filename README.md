@@ -1,6 +1,6 @@
 # SharedTrucks Logistics
 
-A responsive, single-page website for shared truckload freight across Ethiopia. Built from the approved navy, slate and white mockup using plain HTML, CSS and JavaScript.
+A responsive, single-page website for shared truckload freight across Ethiopia. Built with plain HTML, CSS and JavaScript. The refined design preserves the approved navy, slate and white identity, with original vector freight illustrations and a lighter Inter type system.
 
 ## Files
 
@@ -10,7 +10,7 @@ A responsive, single-page website for shared truckload freight across Ethiopia. 
 | `styles.css` | Brand styling and responsive layouts |
 | `script.js` | Mobile navigation, validation and direct enquiry submission |
 | `site-config.js` | Public Web3Forms access key for the business enquiry form |
-| `assets/` | Vector logo, favicon, WebP imagery and self-hosted Inter font |
+| `assets/` | Original vector freight illustrations, preserved logo and favicon, and self-hosted Inter font |
 | `404.html` | Missing-page screen |
 | `.nojekyll` | Serve the static files directly on GitHub Pages |
 | `CNAME` | Configured GitHub Pages custom domain: `sharedtrucks.com` |
@@ -19,7 +19,7 @@ No framework, package installation or build step is required. Open `index.html` 
 
 ## Quote form — direct website submissions
 
-Visitors use **Send enquiry** to submit from the page. JavaScript sends the form fields to Web3Forms over HTTPS; the service delivers accepted submissions to the mailbox associated with the form’s access key. The owner-provided public key is configured in `site-config.js` for enquiries intended for **sharedtrucks.cargo@gmail.com**. Visitors remain on the website throughout submission. The separate email link remains an optional contact method.
+Visitors use **Send enquiry** to submit from the page. JavaScript sends the form fields to Web3Forms over HTTPS; the service delivers accepted submissions to the mailbox associated with the form’s access key. The owner-provided public key is configured in `site-config.js` for enquiries intended for **sharedtrucks.cargo@gmail.com**. Visitors remain on the website throughout submission. The contact address is displayed as text; the form does not open an email application.
 
 ### Maintain or replace the receiving form
 
@@ -35,7 +35,7 @@ window.SHAREDTRUCKS_CONFIG = {
 3. Publish the updated configuration with the site. A blank key keeps the submit button disabled and displays a short temporary-unavailability message.
 4. Send one clearly labelled test enquiry from the published HTTPS site. Check the page confirmation and the receiving inbox, including spam, and confirm that the shipment fields and contact details arrive. Test a valid email contact for Reply-To and a phone-only contact before treating delivery as verified.
 
-The current free plan includes **250 submissions per month**; check [Web3Forms pricing](https://web3forms.com/#pricing) when choosing or changing the plan. The access key is a public alias for the receiving form, designed for browser use. Do not place passwords or private credentials in this file.
+Check [Web3Forms pricing](https://web3forms.com/#pricing) for current submission limits when choosing or changing the plan. The access key is a public alias for the receiving form, designed for browser use. Do not place passwords or private credentials in this file.
 
 ### Submission behavior
 
@@ -82,7 +82,8 @@ References: [GitHub’s custom-domain documentation](https://docs.github.com/en/
 
 - Primary navy: `#14293D`; slate: `#42647B`; white and pale cool-gray surfaces.
 - Editable vector logo files are in `assets/`.
-- Freight imagery was generated for this design and represents the service; it is not a photograph of an owned SharedTrucks fleet.
+- The page uses original SVG freight illustrations: a shared-load cutaway truck and four consistent vehicle profiles. They illustrate transport options, not an owned SharedTrucks fleet. The earlier WebP assets are retained in the repository but are no longer loaded by the page.
+- Logo, logo-mark and favicon assets remain unchanged. Display typography uses the existing self-hosted Inter with more restrained weights and spacing.
 - Inter is self-hosted under the SIL Open Font License; the license is included in `assets/INTER-LICENSE.txt`.
 - Office location appears once in the visible page footer.
 
