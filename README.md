@@ -10,7 +10,7 @@ A responsive, single-page website for shared truckload freight across Ethiopia. 
 | `styles.css` | Brand styling and responsive layouts |
 | `script.js` | Mobile navigation, validation and direct enquiry submission |
 | `site-config.js` | Public Web3Forms access key for the business enquiry form |
-| `assets/` | Original vector freight illustrations, preserved logo and favicon, and self-hosted Inter font |
+| `assets/` | Original freight illustrations, shared-cargo logo and browser/mobile icons, and self-hosted Inter font |
 | `404.html` | Missing-page screen |
 | `.nojekyll` | Serve the static files directly on GitHub Pages |
 | `CNAME` | Configured GitHub Pages custom domain: `sharedtrucks.com` |
@@ -74,16 +74,19 @@ Reference: [GitHub’s publishing-source documentation](https://docs.github.com/
 
 The original nameservers and existing email records remain unchanged. Preserve them when updating website DNS, and keep the root `CNAME` file in future deployments.
 
-GitHub provisions the TLS certificate automatically after DNS validation. Once the certificate is ready, open the repository’s **Settings → Pages** and select **Enforce HTTPS** if it is not already enabled.
+GitHub provisions the TLS certificate automatically after DNS validation. HTTPS is enabled for this site. Keep **Enforce HTTPS** selected in the repository’s **Settings → Pages**.
 
 References: [GitHub’s custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) and [HTTPS setup](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https).
 
 ## Brand and assets
 
 - Primary navy: `#14293D`; slate: `#42647B`; white and pale cool-gray surfaces.
-- Editable vector logo files are in `assets/`.
+- The SharedTrucks mark represents three distinct loads on one shared truck. The wordmark uses outlined Inter at weight 560 to match the site and display consistently without depending on system fonts. Primary vector files are `assets/logo.svg` and `assets/logo-mark.svg`; a transparent high-resolution export is `assets/logo.png`.
 - The page uses original SVG freight illustrations: a shared-load cutaway truck and four consistent vehicle profiles. They illustrate transport options, not an owned SharedTrucks fleet. The earlier WebP assets are retained in the repository but are no longer loaded by the page.
-- Logo, logo-mark and favicon assets remain unchanged. Display typography uses the existing self-hosted Inter with more restrained weights and spacing.
+- Browser icons use the white shared-cargo mark on a navy tile for contrast on light and dark tab bars. `assets/favicon-shared-cargo.svg` is the current scalable favicon; `assets/favicon.svg` is also updated for existing references. `favicon.ico` contains 16, 32 and 48px entries, with matching PNG exports in `assets/`.
+- `apple-touch-icon.png` is an opaque 180px icon. `site.webmanifest` supplies 192px and 512px icons, plus a separately padded maskable version. The manifest keeps ordinary browser display; it does not add an offline application or service worker. Icon links are present on the homepage and the 404 page.
+- The new icon filename and versioned logo/raster links avoid reusing the previous asset URLs. Existing saved bookmarks may use their own refresh schedule.
+- Office address: Jigjiga, Somali Region, Ethiopia.
 - Inter is self-hosted under the SIL Open Font License; the license is included in `assets/INTER-LICENSE.txt`.
 - Office location appears once in the visible page footer.
 

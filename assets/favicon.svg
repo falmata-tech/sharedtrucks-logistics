@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" fill="none" role="img" aria-labelledby="sharedtrucks-favicon-title">
-  <title id="sharedtrucks-favicon-title">SharedTrucks</title>
-  <g fill="#14293D" transform="translate(28 10)">
-    <path d="M21 65 133 3C139-1 145-1 152 3L254 56C261 60 263 65 263 72V123C263 133 255 139 246 134L120 73C108 67 98 73 98 86V169C98 173 96 176 92 174L22 140C16 137 13 132 13 126V80C13 73 16 69 21 65Z"/>
-    <path d="M16 165 149 230C155 233 160 231 160 224V183C160 177 157 174 152 172L127 160C123 158 121 154 121 149V110C121 105 124 103 129 106L249 164C255 167 257 171 257 178V219C257 225 255 229 250 232L130 297C123 301 117 301 110 297L7 242C2 239 0 236 0 230V179C0 168 7 161 16 165Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"><title>SharedTrucks</title><rect width="64" height="64" rx="12" fill="#14293d"/><g transform="translate(-.5 -1.5)">  <path fill="#fff" d="M4 11h10v25H4zM30 11h10v25H30z"/>
+  <path fill="#fff" d="M17 11h10v25H17z"/>
+  <path fill="#fff" fill-rule="evenodd" d="M44 21h8l9 12v14H4v-7h40V21ZM48 25v8h8l-6-8h-2Z"/>
+  <circle cx="15" cy="50" r="6" fill="#fff"/>
+  <circle cx="51" cy="50" r="6" fill="#fff"/>
+</g></svg>
