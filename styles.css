@@ -92,10 +92,43 @@ h3 { font-size: 21px; line-height: 1.3; letter-spacing: -.03em; }
 .shared-section .eyebrow { color: var(--line); }
 .shared-section .label-square { background: var(--line); }
 .shared-description { color: var(--line); max-width: 455px; font-size: 18px; line-height: 1.75; padding-bottom: 3px; }
-.benefit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 54px; margin-top: 62px; border-top: 1px solid rgba(220,228,235,.25); padding-top: 33px; }
+.benefit-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 70px; margin-top: 52px; border-top: 1px solid rgba(220,228,235,.25); padding-top: 33px; }
 .benefit-icon { display: block; width: 30px; height: 30px; color: var(--line); margin-bottom: 23px; }
-.benefit-grid h3 { font-size: 19px; letter-spacing: -.025em; }
-.benefit-grid p { color: var(--line); font-size: 14px; line-height: 1.75; margin-top: 12px; max-width: 315px; }
+.benefit-grid h3 { font-size: 22px; letter-spacing: -.025em; }
+.benefit-grid p { color: var(--line); font-size: 14px; line-height: 1.8; margin-top: 12px; max-width: 480px; }
+
+.network-grid, .commerce-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 70px; }
+.network-copy, .commerce-copy { min-width: 0; }
+.network-copy > p, .commerce-copy > p { max-width: 470px; margin-top: 25px; font-size: 16px; line-height: 1.8; }
+.network-copy > p + p, .commerce-copy > p + p { margin-top: 15px; }
+.network-copy .text-link, .commerce-copy .text-link { margin-top: 25px; }
+.capacity-panel { min-width: 0; padding: 31px; border: 1px solid var(--line); background: var(--paper); }
+.capacity-panel-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.capacity-panel-head img { width: 183px; height: auto; }
+.capacity-panel-head > span { color: var(--muted); font-size: 10px; line-height: 1.5; text-align: right; }
+.capacity-fields { margin: 30px 0 25px; border-top: 1px solid #cad6e0; }
+.capacity-fields > div { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 18px; padding-block: 26px; border-bottom: 1px solid #cad6e0; }
+.capacity-fields dt { display: flex; align-items: center; gap: 13px; font-size: 15px; line-height: 1.5; font-weight: 550; }
+.capacity-fields dt svg { width: 25px; height: 25px; color: var(--slate); flex-shrink: 0; }
+.capacity-fields dd { margin: 0; color: var(--slate); font-size: 12px; line-height: 1.6; text-align: right; }
+.capacity-panel figcaption { display: flex; align-items: center; gap: 13px; color: var(--slate); font-size: 11px; line-height: 1.6; }
+.capacity-panel figcaption img { width: 21px; height: auto; }
+.vehicles-section { background: var(--paper); }
+.vehicles-section .vehicle-image { background: var(--white); }
+.commerce-grid { grid-template-columns: 1fr 1.1fr; }
+.commerce-visual { min-width: 0; min-height: 370px; display: flex; flex-direction: column; justify-content: center; padding: 40px 30px; border: 1px solid var(--line); background: var(--white); }
+.commerce-brand { position: relative; width: 272px; max-width: 100%; height: 85px; overflow: hidden; margin-inline: auto; }
+.commerce-brand img { position: absolute; width: 120%; max-width: none; height: auto; left: -10%; top: 50%; transform: translateY(-50%); }
+.trade-route { display: grid; grid-template-columns: 86px minmax(0,1fr) 86px; align-items: start; gap: 10px; margin-top: 45px; }
+.trade-party { display: flex; flex-direction: column; align-items: center; gap: 13px; }
+.trade-party svg { width: 55px; height: 55px; fill: none; stroke: var(--navy); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.trade-party > span { font-size: 12px; line-height: 1.4; text-align: center; font-weight: 500; }
+.trade-connection { position: relative; display: flex; align-items: flex-start; justify-content: center; height: 84px; }
+.trade-line { position: absolute; left: 0; right: 0; top: 28px; height: 1px; background: var(--slate); }
+.trade-carrier { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 9px 13px 0; background: var(--white); }
+.trade-carrier img { width: 27px; height: auto; }
+.trade-carrier > span { margin-top: 22px; font-size: 10px; line-height: 1.4; font-weight: 550; }
+.trade-connection > .arrow { position: absolute; top: 18px; right: -2px; width: 21px; height: 21px; color: var(--slate); }
 
 .section-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; align-items: end; }
 .section-intro > p { max-width: 360px; font-size: 16px; padding-bottom: 3px; }
@@ -166,11 +199,15 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
   .hero-description { max-width: 390px; font-size: 15px; }
   .hero-actions { gap: 16px; }
   .hero-actions .button { padding-inline: 17px; gap: 20px; }
-  .shared-intro, .section-intro, .process-layout, .quote-grid { gap: 45px; }
+  .shared-intro, .section-intro, .process-layout, .quote-grid, .network-grid, .commerce-grid { gap: 45px; }
   .benefit-grid { gap: 32px; }
   .benefit-grid h3 { font-size: 18px; }
   .vehicle-grid { gap: 18px; }
   .vehicle h3 { font-size: 18px; }
+  .capacity-panel { padding: 26px; }
+  .capacity-panel-head img { width: 166px; }
+  .capacity-panel-head > span { font-size: 9px; }
+  .commerce-visual { padding-inline: 24px; }
 }
 @media (max-width: 900px) {
   html { scroll-padding-top: 94px; }
@@ -221,6 +258,20 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
   .field label { font-size: 11px; }
   .footer-inner { gap: 24px; }
   .footer-brand { width: 185px; }
+  .network-grid, .commerce-grid { gap: 32px; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .network-copy > p, .commerce-copy > p { font-size: 14px; }
+  .capacity-panel { padding: 22px; }
+  .capacity-panel-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .capacity-fields { margin-top: 22px; }
+  .capacity-fields > div { grid-template-columns: 1fr; gap: 7px; padding-block: 20px; }
+  .capacity-fields dd { margin-left: 38px; text-align: left; }
+  .commerce-visual { padding: 30px 20px; min-height: 340px; }
+  .commerce-brand { width: 230px; height: 73px; }
+  .trade-route { grid-template-columns: 70px minmax(0,1fr) 70px; gap: 5px; margin-top: 39px; }
+  .trade-party svg { width: 47px; height: 55px; }
+  .trade-party > span { font-size: 11px; }
+  .trade-carrier { padding-inline: 8px; }
+  .trade-carrier > span { font-size: 9px; }
 }
 @media (max-width: 650px) {
   :root { --gutter: 24px; }
@@ -271,6 +322,21 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
   .footer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 15px; }
   .footer-brand { width: 190px; grid-column: 1 / -1; }
   .copyright { max-width: 145px; justify-self: end; font-size: 10px; align-self: end; }
+  .network-grid, .commerce-grid { grid-template-columns: minmax(0,1fr); gap: 32px; }
+  .network-copy > p, .commerce-copy > p { font-size: 15px; max-width: 480px; margin-top: 22px; }
+  .capacity-panel-head { flex-direction: row; align-items: center; gap: 14px; }
+  .capacity-panel-head img { width: 160px; }
+  .capacity-panel-head > span { max-width: 88px; }
+  .capacity-fields > div { grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); gap: 12px; padding-block: 23px; }
+  .capacity-fields dd { margin-left: 0; text-align: right; }
+  .capacity-fields dt { font-size: 14px; gap: 10px; }
+  .commerce-copy { grid-row: 1; }
+  .commerce-visual { min-height: 320px; padding: 34px 20px; }
+  .commerce-brand { width: 244px; height: 78px; }
+  .trade-route { grid-template-columns: 76px minmax(0,1fr) 76px; margin-top: 42px; }
+  .trade-party svg { width: 52px; }
+  .trade-party > span { font-size: 12px; }
+  .trade-carrier > span { font-size: 10px; }
 }
 @media (max-width: 380px) {
   :root { --gutter: 20px; }

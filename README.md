@@ -1,6 +1,16 @@
 # SharedTrucks Logistics
 
-A responsive, single-page website for shared truckload freight across Ethiopia. Built with plain HTML, CSS and JavaScript. The refined design preserves the approved navy, slate and white identity, with original vector freight illustrations and a lighter Inter type system.
+A responsive, single-page website for shared truckload freight across Ethiopia and East Africa. Built with plain HTML, CSS and JavaScript. The design preserves the approved navy, slate and white identity, with original vector freight illustrations and a lighter Inter type system.
+
+## Narrative and content
+
+Lead with the economics of compatible shipments sharing a corridor: businesses share transport costs and providers make better use of available space. Explain the operational substance before asking for an enquiry. Keep section headings direct and avoid repeating them in eyebrow labels.
+
+Loadgistic is introduced only in the transport-network section. Availability, open capacity and planned routes are vehicle-level information published by transport providers; real-time visibility refers to those updates, not a promise that every vehicle has automatic GPS tracking or continuously fresh capacity data. The information panel describes available fields and contains no invented live inventory.
+
+The owner has confirmed that SharedTrucks is AfricMade’s first logistics service provider partner. The partnership section connects supplier-buyer orders to transport coordination; it does not claim an automated checkout or booking integration. Coverage is Ethiopia and wider East Africa, without asserting particular cross-border lanes or customs services.
+
+Content references reviewed on 26 October 2026: [Loadgistic capacity](https://loadgistic.com/), [Loadgistic terms](https://loadgistic.com/terms), [Loadgistic privacy](https://loadgistic.com/privacy), [AfricMade](https://africmade.com/), [Flock shared truckload](https://www.flockfreight.com/freight-shipping/flockdirect-shared-truckload), and [Flock carrier proposition](https://www.flockfreight.com/freight-carriers/haul-with-flock). Flock informs the clarity of the shared-space explanation; no Flock performance figures, network-size claims or proprietary technology claims are used.
 
 ## Files
 
