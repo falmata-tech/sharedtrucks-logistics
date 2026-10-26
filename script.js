@@ -1,5 +1,7 @@
 (function () {
   'use strict';
+  const locale = window.SiteLanguage;
+  const text = locale.text;
 
   function ready() {
     initNavigation();
@@ -13,7 +15,7 @@
 
     function setOpen(open, returnFocus) {
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      toggle.setAttribute('aria-label', open ? text('nav.close') : text('nav.open'));
       navigation.classList.toggle('is-open', open);
       document.body.classList.toggle('nav-open', open);
       if (returnFocus) toggle.focus();
@@ -67,6 +69,7 @@
     const config = window.SHAREDTRUCKS_CONFIG || {};
     const accessKey = typeof config.web3formsAccessKey === 'string'
       ? config.web3formsAccessKey.trim() : '';
+    locale.bindValidation(form);
     let submitting = false;
 
     function setButtonLabel(text) {
@@ -102,7 +105,7 @@
       event.preventDefault();
       if (submitting) return;
       if (!accessKey) {
-        setStatus('The enquiry form is temporarily unavailable. Please try again later.', 'error', true);
+        setStatus(text('form.unavailable'), 'error', true);
         return;
       }
 
@@ -121,7 +124,7 @@
       const contactField = form.elements.namedItem('contact');
       if (data.contact && !isEmail(data.contact) && !isPhone(data.contact)) {
         if (contactField && typeof contactField.setCustomValidity === 'function') {
-          contactField.setCustomValidity('Enter a phone number or email address so we can contact you.');
+          contactField.setCustomValidity(text('validation.contact'));
           contactField.setAttribute('aria-invalid', 'true');
         }
       }
@@ -133,7 +136,7 @@
             field.setAttribute('aria-invalid', 'true');
           }
         });
-        setStatus('Please check the highlighted fields.', 'error');
+        setStatus(text('form.check'), 'error');
         form.reportValidity();
         return;
       }
@@ -143,13 +146,14 @@
         const selected = vehicleField.selectedOptions[0];
         data.vehicle = selected ? selected.textContent.trim() : data.vehicle;
       }
-      if (!data.vehicle) data.vehicle = 'Please recommend a suitable vehicle';
+      if (!data.vehicle) data.vehicle = text('form.vehicleFallback');
 
       const honeypot = form.elements.namedItem('botcheck');
       const payload = Object.assign({
         access_key: accessKey,
         subject: 'SharedTrucks — new shipment enquiry',
         from_name: 'SharedTrucks Logistics',
+        language: locale.language,
         botcheck: Boolean(honeypot && honeypot.checked)
       }, data);
       if (isEmail(data.contact)) {
@@ -163,8 +167,8 @@
         .map(function (field) { return { field: field, disabled: field.disabled }; });
       controlStates.forEach(function (item) { item.field.disabled = true; });
       form.setAttribute('aria-busy', 'true');
-      setButtonLabel('Sending…');
-      setStatus('Sending your enquiry…', 'pending');
+      setButtonLabel(text('form.sendingButton'));
+      setStatus(text('form.sending'), 'pending');
       const controller = new AbortController();
       const timeout = window.setTimeout(function () { controller.abort(); }, 20000);
 
@@ -184,27 +188,27 @@
           throw error;
         }
         form.reset();
-        setStatus('Your enquiry has been submitted. Our team will contact you.', 'success');
+        setStatus(text('form.success'), 'success');
       } catch (error) {
         if (error && error.enquiryOutcome === 'setup') {
-          setStatus('Your enquiry has not been sent. The form is not ready to receive messages yet. Please try again later.', 'error', true);
+          setStatus(text('form.setupError'), 'error', true);
         } else {
-          setStatus('We couldn’t confirm that your enquiry was received. Your details are still in the form. Please try again.', 'error', true);
+          setStatus(text('form.error'), 'error', true);
         }
       } finally {
         window.clearTimeout(timeout);
         controlStates.forEach(function (item) { item.field.disabled = item.disabled; });
         submitting = false;
         form.setAttribute('aria-busy', 'false');
-        setButtonLabel('Send enquiry');
+        setButtonLabel(text('form.send'));
       }
     });
 
-    setButtonLabel('Send enquiry');
+    setButtonLabel(text('form.send'));
     // The HTML button stays disabled until both the handler and a form key are ready.
     if (submitButton) submitButton.disabled = !accessKey;
     if (!accessKey) {
-      setStatus('The enquiry form is temporarily unavailable. Please try again later.');
+      setStatus(text('form.unavailable'));
     }
   }
 
