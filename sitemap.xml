@@ -5,6 +5,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sharedtrucks.com/"/>
     <xhtml:link rel="alternate" hreflang="am" href="https://sharedtrucks.com/am/"/>
     <xhtml:link rel="alternate" hreflang="om" href="https://sharedtrucks.com/om/"/>
+    <xhtml:link rel="alternate" hreflang="so" href="https://sharedtrucks.com/so/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sharedtrucks.com/"/>
   </url>
   <url>
@@ -12,6 +13,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sharedtrucks.com/"/>
     <xhtml:link rel="alternate" hreflang="am" href="https://sharedtrucks.com/am/"/>
     <xhtml:link rel="alternate" hreflang="om" href="https://sharedtrucks.com/om/"/>
+    <xhtml:link rel="alternate" hreflang="so" href="https://sharedtrucks.com/so/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sharedtrucks.com/"/>
   </url>
   <url>
@@ -19,6 +21,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sharedtrucks.com/"/>
     <xhtml:link rel="alternate" hreflang="am" href="https://sharedtrucks.com/am/"/>
     <xhtml:link rel="alternate" hreflang="om" href="https://sharedtrucks.com/om/"/>
+    <xhtml:link rel="alternate" hreflang="so" href="https://sharedtrucks.com/so/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sharedtrucks.com/"/>
+  </url>
+  <url>
+    <loc>https://sharedtrucks.com/so/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sharedtrucks.com/"/>
+    <xhtml:link rel="alternate" hreflang="am" href="https://sharedtrucks.com/am/"/>
+    <xhtml:link rel="alternate" hreflang="om" href="https://sharedtrucks.com/om/"/>
+    <xhtml:link rel="alternate" hreflang="so" href="https://sharedtrucks.com/so/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sharedtrucks.com/"/>
   </url>
 </urlset>

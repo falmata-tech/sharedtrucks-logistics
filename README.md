@@ -6,11 +6,11 @@ A responsive, single-page website for shared truckload freight across Ethiopia a
 
 Lead with the economics of compatible shipments sharing a corridor: businesses share transport costs and providers make better use of available space. Explain the operational substance before asking for an enquiry. Keep section headings direct and avoid repeating them in eyebrow labels.
 
-Loadgistic is introduced only in the transport-network section. Availability, open capacity and planned routes are vehicle-level information published by transport providers; real-time visibility refers to those updates, not a promise that every vehicle has automatic GPS tracking or continuously fresh capacity data. The information panel describes available fields and contains no invented live inventory.
+The public story is standalone: technology brings vehicle availability, capacity and route information together; the team uses that information to coordinate compatible freight. No specific software products, partners or proprietary algorithms are named. The network panel describes information used for coordination, without invented live inventory or GPS claims.
 
-The owner has confirmed that SharedTrucks is AfricMade’s first logistics service provider partner. The partnership section connects supplier-buyer orders to transport coordination; it does not claim an automated checkout or booking integration. Coverage is Ethiopia and wider East Africa, without asserting particular cross-border lanes or customs services.
+The business-shipping section connects suppliers and customers, covering small orders, bulk purchases and regular shipments. Coverage is Ethiopia and wider East Africa, without asserting particular cross-border lanes or customs services. The footer identifies SharedTrucks as a MarketVision Technology company and credits MarketVision Technology as the copyright owner. The office address remains in the footer once.
 
-Content references reviewed on 26 October 2026: [Loadgistic capacity](https://loadgistic.com/), [Loadgistic terms](https://loadgistic.com/terms), [Loadgistic privacy](https://loadgistic.com/privacy), [AfricMade](https://africmade.com/), [Flock shared truckload](https://www.flockfreight.com/freight-shipping/flockdirect-shared-truckload), and [Flock carrier proposition](https://www.flockfreight.com/freight-carriers/haul-with-flock). Flock informs the clarity of the shared-space explanation; no Flock performance figures, network-size claims or proprietary technology claims are used.
+Flock Freight is a reference for a clear, customer-focused explanation of shared truckload. No competitor copy, performance figures, network-size claims or technology claims are reproduced.
 
 ## Files
 
@@ -53,7 +53,7 @@ Check [Web3Forms pricing](https://web3forms.com/#pricing) for current submission
 - When the contact value is a valid email address, it is also supplied as `email` and `replyto`. A phone-only contact remains in `contact`, with those email-specific fields omitted.
 - The hidden `botcheck` checkbox provides the service’s honeypot field. No captcha-disabling or automatic-response options are added.
 - While sending, the form controls are disabled to prevent duplicate requests or edits to an enquiry in flight. Network, HTTP, malformed-response, and service failures retain entered details and show an accessible error. The form resets only after an HTTP success response and an explicit JSON `success: true`, with no activation or error indication.
-- JavaScript is required for this form. The website does not save enquiries in browser storage or add analytics. Submitted details are processed by Web3Forms under the owner’s service settings.
+- JavaScript is required for this form. The website adds no analytics. A language switch temporarily carries the unfinished form through session storage, as described below; submitted enquiries are not retained in browser storage. Submitted details are processed by Web3Forms under the owner’s service settings.
 
 References: [Web3Forms installation and form options](https://docs.web3forms.com/getting-started/installation) and [HTML and JavaScript submission](https://docs.web3forms.com/how-to-guides/html-and-javascript).
 
@@ -103,17 +103,17 @@ References: [GitHub’s custom-domain documentation](https://docs.github.com/en/
 The `.openai/` and `dist/` folders, if present in the working copy, are local preview files. They are not part of the published source package.
 
 
-## English, Amharic and Afaan Oromoo
+## English, Amharic, Afaan Oromoo and Somali
 
-The root page is English; `/am/` and `/om/` are complete static Amharic and Afaan Oromoo pages. Each has its own page language, title, description, canonical URL and reciprocal language links. `sitemap.xml` includes all three versions. The 404 page uses the requested language when the missing URL contains `/am/` or `/om/`.
+The root page is English; `/am/`, `/om/` and `/so/` are complete static Amharic, Afaan Oromoo and Somali pages. Each has its own page language, title, description, canonical URL and reciprocal language links. `sitemap.xml` includes all four versions. The 404 page uses the requested language when the missing URL contains `/am/`, `/om/` or `/so/`.
 
 The language chooser is visible outside the mobile navigation and uses native disclosure and links. It has named language choices, current-language indication, keyboard support and 44px or larger controls. Switching language keeps the section hash. An unfinished enquiry is transferred once through same-origin session storage and removed when the destination reads it; it expires after two minutes and is never placed in the URL. There is no automatic redirect based on browser language.
 
 ### Editing and rebuilding
 
 - `site-template.html` contains the shared page structure and translation bindings. `error-template.html` contains the error-page structure.
-- `locales/en.json`, `locales/am.json` and `locales/om.json` contain the copy. Keep their keys identical. Headings may use `<br>` and `<span>` for intentional line breaks and colour accents.
-- `index.html`, `am/index.html`, `om/index.html`, `404.html` and `sitemap.xml` are generated. Update the templates/catalogs and rebuild rather than editing those output files directly.
+- `locales/en.json`, `locales/am.json`, `locales/om.json` and `locales/so.json` contain the copy. Keep their keys identical. Headings may use `<br>` and `<span>` for intentional line breaks and colour accents.
+- `index.html`, `am/index.html`, `om/index.html`, `so/index.html`, `404.html` and `sitemap.xml` are generated. Update the templates/catalogs and rebuild rather than editing those output files directly.
 - Install the build-only Python dependency with `python -m pip install -r scripts/requirements.txt`, then run `python scripts/build-locales.py`. The public site itself remains plain static HTML, CSS and JavaScript; it has no Python or translation-service runtime.
 - `languages.js` provides translated form validation and the language-control interactions. Existing form recipients and Web3Forms access keys are unchanged. Submission payloads include the selected language.
 

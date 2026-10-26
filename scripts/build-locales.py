@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build English, Amharic and Afaan Oromo static pages. Requires lxml."""
+"""Build English, Amharic, Afaan Oromoo and Somali static pages. Requires lxml."""
 from pathlib import Path
 from copy import deepcopy
 from lxml import html, etree
@@ -7,8 +7,8 @@ from urllib.parse import urlsplit
 import json,re
 
 ROOT=Path(__file__).resolve().parents[1]
-LANGUAGES={'en':('English','en_US'),'am':('አማርኛ','am_ET'),'om':('Afaan Oromoo','om_ET')}
-VERSION='20261026-languages'
+LANGUAGES={'en':('English','en_US'),'am':('አማርኛ','am_ET'),'om':('Afaan Oromoo','om_ET'),'so':('Soomaali','so_ET')}
+VERSION='20261026-portfolio-so'
 
 
 def fragment(parent, value):
@@ -72,6 +72,11 @@ def build(lang,catalog,english,source):
         if not isinstance(el.tag,str):continue
         for attr in ('src','href'):
             if el.get(attr):el.set(attr,local_link(el.get(attr),prefix))
+    # Carry the chosen language between the two company websites.
+    if lang!='en':
+        for link in doc.xpath('//a[@href]'):
+            if link.get('href') in {'https://sharedtrucks.com/','https://marketvisiontech.com/'}:
+                link.set('href',link.get('href')+lang+'/')
     head=doc.find('head')
     canonical=head.xpath('link[@rel="canonical"]')[0]
     origin=canonical.get('href').rstrip('/')+'/'
@@ -135,7 +140,7 @@ def build_error(source):
     style.text='.error-languages{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.error-languages a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid currentColor;background:transparent;color:inherit;font-size:14px}.error-languages [lang="am"]{font-family:"Noto Sans Ethiopic",sans-serif}html[lang="am"] .error-content h1{font-size:42px;letter-spacing:0;line-height:1.35}'
     copies={code:{key:value for key,value in json.loads((ROOT/'locales'/f'{code}.json').read_text()).items() if key.startswith('error.') or key=='language.label'} for code in LANGUAGES}
     script=etree.SubElement(doc.find('body'),'script')
-    script.text='(function(){const copies='+json.dumps(copies,ensure_ascii=False).replace('<','\\u003c')+';const origin='+json.dumps(origin)+';const lang=location.pathname.split("/").find(part=>part==="am"||part==="om")||"en";const copy=copies[lang];document.documentElement.lang=lang;document.querySelector(".error-languages").setAttribute("aria-label",copy["language.label"]);document.title=copy["error.title"]+" — "+'+json.dumps('SharedTrucks Logistics' if 'sharedtrucks' in origin else 'MarketVision Technology')+';document.getElementById("error-title").textContent=copy["error.title"];document.getElementById("error-description").textContent=copy["error.description"];const home=document.getElementById("error-home");home.textContent=copy["error.home"];home.href=origin+(lang==="en"?"":lang+"/");}());'
+    script.text='(function(){const copies='+json.dumps(copies,ensure_ascii=False).replace('<','\\u003c')+';const origin='+json.dumps(origin)+';const lang=location.pathname.split("/").find(part=>Object.prototype.hasOwnProperty.call(copies,part))||"en";const copy=copies[lang];document.documentElement.lang=lang;document.querySelector(".error-languages").setAttribute("aria-label",copy["language.label"]);document.title=copy["error.title"]+" — "+'+json.dumps('SharedTrucks Logistics' if 'sharedtrucks' in origin else 'MarketVision Technology')+';document.getElementById("error-title").textContent=copy["error.title"];document.getElementById("error-description").textContent=copy["error.description"];const home=document.getElementById("error-home");home.textContent=copy["error.home"];home.href=origin+(lang==="en"?"":lang+"/");}());'
     (ROOT/'404.html').write_text('<!doctype html>\n'+etree.tostring(doc,encoding='unicode',method='html')+'\n',encoding='utf-8')
 
 
