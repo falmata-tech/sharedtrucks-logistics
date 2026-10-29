@@ -8,7 +8,7 @@ import json,re
 
 ROOT=Path(__file__).resolve().parents[1]
 LANGUAGES={'en':('English','en_US'),'am':('አማርኛ','am_ET'),'om':('Afaan Oromoo','om_ET'),'so':('Soomaali','so_ET')}
-VERSION='20261026-portfolio-so'
+VERSION='20261028-concise-copy-v1'
 
 
 def fragment(parent, value):
@@ -163,3 +163,4 @@ def main():
     print(f'Built {len(urls)} languages with {len(english)} complete strings each.')
 
 if __name__=='__main__':main()
+
